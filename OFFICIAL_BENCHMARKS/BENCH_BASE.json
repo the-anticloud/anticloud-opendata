@@ -1,0 +1,603 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "OPENDATA",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\GOVERNMENT\\OPENDATA\\UPSTREAM_CLONE",
+    "git": {
+      "head": "3dfb3b7ca754cd03800470bf2f6ae96d4a5c1e15",
+      "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+      "branch": "main",
+      "committed_at": "2026-09-29T11:06:59+04:00"
+    }
+  },
+  "metrics": {
+    "files_total": 324,
+    "source_files_scanned": 229,
+    "lines_of_code": 48176,
+    "languages": {
+      ".java": 169,
+      ".py": 33,
+      ".pdf": 24,
+      ".md": 22,
+      ".txt": 16,
+      ".sh": 15,
+      ".ts": 11,
+      "(none)": 8,
+      ".json": 8,
+      ".xml": 4,
+      ".mjs": 3,
+      ".png": 3,
+      ".toml": 2,
+      ".lock": 2,
+      ".yaml": 2
+    }
+  },
+  "licence": {
+    "spdx": "Apache-2.0",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 13,
+    "unique": 13,
+    "by_ecosystem": {
+      "npm": 13
+    },
+    "list": [
+      {
+        "ecosystem": "npm",
+        "name": "commander",
+        "version": "^15.0.0",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "@eslint/js",
+        "version": "^10.0.1",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "@types/node",
+        "version": "^26.5.1",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "@typescript-eslint/eslint-plugin",
+        "version": "^8.70.0",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "@typescript-eslint/parser",
+        "version": "^8.70.0",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "eslint",
+        "version": "^10.10.0",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "glob",
+        "version": "^13.0.6",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "globals",
+        "version": "^17.12.0",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "prettier",
+        "version": "^3.9.6",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "tsup",
+        "version": "^8.5.1",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "typescript",
+        "version": "^6.0.3",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "vite",
+        "version": "^8.3.0",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "vitest",
+        "version": "^5.0.0",
+        "source_file": "node/opendataloader-pdf/package.json",
+        "raw": ""
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 160,
+    "files_with_findings": 157,
+    "severity": {
+      "high": 5,
+      "medium": 1,
+      "low": 154
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "skills/odl-pdf/scripts/detect-env.sh",
+            "line": 207,
+            "cwe": "CWE-78",
+            "snippet": "printf '%s\\n' \"OS=$(detect_os)\""
+          },
+          {
+            "severity": "medium",
+            "file": "java/opendataloader-pdf-core/src/main/java/org/opendataloader/pdf/processors/HybridDocumentProcessor.java",
+            "line": 922,
+            "cwe": "CWE-89",
+            "snippet": "+ String.format(\"%.1f,%.1f,%.1f,%.1f\", picture.getLeftX(), picture.getBottomY(), picture.getRightX(), picture.getTopY()) + \"]\");"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 3,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "scripts/preflight.sh",
+            "line": 228,
+            "cwe": "CWE-",
+            "snippet": "if ! TMP=\"$(mktemp -d \"${temp_base}/preflight.XXXXXX\")\"; then"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/main/java/org/opendataloader/pdf/processors/AutoTaggingProcessor.java",
+            "line": 514,
+            "cwe": "CWE-",
+            "snippet": "//TODO Use AI to generate descriptions"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/main/java/org/opendataloader/pdf/processors/ListProcessor.java",
+            "line": 116,
+            "cwe": "CWE-",
+            "snippet": "if (!isCorrectList(interval)) {//todo move to arabic number list recognition"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "verification/ci-verify.py",
+            "line": 55,
+            "cwe": "CWE-798",
+            "snippet": "PASSWORD = \"test\""
+          }
+        ]
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 154,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "verification/ci-verify.py",
+            "line": 459,
+            "cwe": "CWE-319",
+            "snippet": "UNREACHABLE_HYBRID_URL = \"http://127.0.0.1:1\""
+          },
+          {
+            "severity": "low",
+            "file": "skills/odl-pdf/scripts/hybrid-health.sh",
+            "line": 9,
+            "cwe": "CWE-319",
+            "snippet": "DEFAULT_URL=\"http://localhost:5002\""
+          },
+          {
+            "severity": "high",
+            "file": "scripts/build-all.sh",
+            "line": 30,
+            "cwe": "CWE-494",
+            "snippet": "command -v uv >/dev/null || { echo \"Error: uv not found. Install with: curl -LsSf https://astral.sh/uv/install.sh | sh\"; exit 1; }"
+          },
+          {
+            "severity": "high",
+            "file": "scripts/build-python.sh",
+            "line": 14,
+            "cwe": "CWE-494",
+            "snippet": "command -v uv >/dev/null || { echo \"Error: uv not found. Install with: curl -LsSf https://astral.sh/uv/install.sh | sh\"; exit 1; }"
+          },
+          {
+            "severity": "high",
+            "file": "scripts/test-python.sh",
+            "line": 14,
+            "cwe": "CWE-494",
+            "snippet": "command -v uv >/dev/null || { echo \"Error: uv not found. Install with: curl -LsSf https://astral.sh/uv/install.sh | sh\"; exit 1; }"
+          },
+          {
+            "severity": "low",
+            "file": "python/opendataloader-pdf/tests/test_hybrid_server_nonblocking.py",
+            "line": 84,
+            "cwe": "CWE-319",
+            "snippet": "async with AsyncClient(transport=transport, base_url=\"http://test\") as client:"
+          },
+          {
+            "severity": "low",
+            "file": "python/opendataloader-pdf/src/opendataloader_pdf/hybrid_server.py",
+            "line": 19,
+            "cwe": "CWE-319",
+            "snippet": "# Default: http://localhost:5002"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/EmbedImagesIntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/HybridBackendFailureIntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/HybridScannedPageRoutingIntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/ImageDirIntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/IncludeHeaderFooterJsonIntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/IntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/Issue336IntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/Issue408IntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/PageSeparatorIntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/PagesOptionIntegrationTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/utils/Base64ImageUtilsTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/utils/ImageFormatSupportTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/utils/ImagesUtilsTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/regression/ToUnicodeRegressionTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/processors/BackgroundFilterTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/processors/CaptionPlacementTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/processors/CaptionProcessorTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "severity": "low",
+            "file": "java/opendataloader-pdf-core/src/test/java/org/opendataloader/pdf/processors/CidFontDetectionTest.java",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 1,
+    "files_with_findings": 1,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "examples/python/rag/langchain_example.py",
+            "line": 55,
+            "cwe": "CWE-",
+            "snippet": "print(\"  - Vector stores: Chroma, FAISS, Pinecone, etc.\")"
+          }
+        ]
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:fa8e5497-32d7-56c0-a2c4-ae70229cba57",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T06:29:01Z",
+      "component": {
+        "type": "application",
+        "name": "OPENDATA",
+        "version": "83b357604d34",
+        "bom-ref": "pkg:generic/anticloud/OPENDATA@83b357604d34",
+        "purl": "pkg:generic/anticloud/OPENDATA@83b357604d34",
+        "licenses": [
+          {
+            "license": {
+              "id": "Apache-2.0"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": ""
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "commander",
+        "version": "^15.0.0",
+        "purl": "pkg:npm/commander@^15.0.0",
+        "bom-ref": "npm/commander@^15.0.0"
+      },
+      {
+        "type": "library",
+        "name": "@eslint/js",
+        "version": "^10.0.1",
+        "purl": "pkg:npm/@eslint/js@^10.0.1",
+        "bom-ref": "npm/@eslint/js@^10.0.1"
+      },
+      {
+        "type": "library",
+        "name": "@types/node",
+        "version": "^26.5.1",
+        "purl": "pkg:npm/@types/node@^26.5.1",
+        "bom-ref": "npm/@types/node@^26.5.1"
+      },
+      {
+        "type": "library",
+        "name": "@typescript-eslint/eslint-plugin",
+        "version": "^8.70.0",
+        "purl": "pkg:npm/@typescript-eslint/eslint-plugin@^8.70.0",
+        "bom-ref": "npm/@typescript-eslint/eslint-plugin@^8.70.0"
+      },
+      {
+        "type": "library",
+        "name": "@typescript-eslint/parser",
+        "version": "^8.70.0",
+        "purl": "pkg:npm/@typescript-eslint/parser@^8.70.0",
+        "bom-ref": "npm/@typescript-eslint/parser@^8.70.0"
+      },
+      {
+        "type": "library",
+        "name": "eslint",
+        "version": "^10.10.0",
+        "purl": "pkg:npm/eslint@^10.10.0",
+        "bom-ref": "npm/eslint@^10.10.0"
+      },
+      {
+        "type": "library",
+        "name": "glob",
+        "version": "^13.0.6",
+        "purl": "pkg:npm/glob@^13.0.6",
+        "bom-ref": "npm/glob@^13.0.6"
+      },
+      {
+        "type": "library",
+        "name": "globals",
+        "version": "^17.12.0",
+        "purl": "pkg:npm/globals@^17.12.0",
+        "bom-ref": "npm/globals@^17.12.0"
+      },
+      {
+        "type": "library",
+        "name": "prettier",
+        "version": "^3.9.6",
+        "purl": "pkg:npm/prettier@^3.9.6",
+        "bom-ref": "npm/prettier@^3.9.6"
+      },
+      {
+        "type": "library",
+        "name": "tsup",
+        "version": "^8.5.1",
+        "purl": "pkg:npm/tsup@^8.5.1",
+        "bom-ref": "npm/tsup@^8.5.1"
+      },
+      {
+        "type": "library",
+        "name": "typescript",
+        "version": "^6.0.3",
+        "purl": "pkg:npm/typescript@^6.0.3",
+        "bom-ref": "npm/typescript@^6.0.3"
+      },
+      {
+        "type": "library",
+        "name": "vite",
+        "version": "^8.3.0",
+        "purl": "pkg:npm/vite@^8.3.0",
+        "bom-ref": "npm/vite@^8.3.0"
+      },
+      {
+        "type": "library",
+        "name": "vitest",
+        "version": "^5.0.0",
+        "purl": "pkg:npm/vitest@^5.0.0",
+        "bom-ref": "npm/vitest@^5.0.0"
+      }
+    ]
+  },
+  "elapsed_seconds": 2.05
+}

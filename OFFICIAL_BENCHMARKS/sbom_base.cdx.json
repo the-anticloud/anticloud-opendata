@@ -1,0 +1,130 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:fa8e5497-32d7-56c0-a2c4-ae70229cba57",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T06:29:01Z",
+    "component": {
+      "type": "application",
+      "name": "OPENDATA",
+      "version": "83b357604d34",
+      "bom-ref": "pkg:generic/anticloud/OPENDATA@83b357604d34",
+      "purl": "pkg:generic/anticloud/OPENDATA@83b357604d34",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": ""
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "commander",
+      "version": "^15.0.0",
+      "purl": "pkg:npm/commander@^15.0.0",
+      "bom-ref": "npm/commander@^15.0.0"
+    },
+    {
+      "type": "library",
+      "name": "@eslint/js",
+      "version": "^10.0.1",
+      "purl": "pkg:npm/@eslint/js@^10.0.1",
+      "bom-ref": "npm/@eslint/js@^10.0.1"
+    },
+    {
+      "type": "library",
+      "name": "@types/node",
+      "version": "^26.5.1",
+      "purl": "pkg:npm/@types/node@^26.5.1",
+      "bom-ref": "npm/@types/node@^26.5.1"
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/eslint-plugin",
+      "version": "^8.70.0",
+      "purl": "pkg:npm/@typescript-eslint/eslint-plugin@^8.70.0",
+      "bom-ref": "npm/@typescript-eslint/eslint-plugin@^8.70.0"
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/parser",
+      "version": "^8.70.0",
+      "purl": "pkg:npm/@typescript-eslint/parser@^8.70.0",
+      "bom-ref": "npm/@typescript-eslint/parser@^8.70.0"
+    },
+    {
+      "type": "library",
+      "name": "eslint",
+      "version": "^10.10.0",
+      "purl": "pkg:npm/eslint@^10.10.0",
+      "bom-ref": "npm/eslint@^10.10.0"
+    },
+    {
+      "type": "library",
+      "name": "glob",
+      "version": "^13.0.6",
+      "purl": "pkg:npm/glob@^13.0.6",
+      "bom-ref": "npm/glob@^13.0.6"
+    },
+    {
+      "type": "library",
+      "name": "globals",
+      "version": "^17.12.0",
+      "purl": "pkg:npm/globals@^17.12.0",
+      "bom-ref": "npm/globals@^17.12.0"
+    },
+    {
+      "type": "library",
+      "name": "prettier",
+      "version": "^3.9.6",
+      "purl": "pkg:npm/prettier@^3.9.6",
+      "bom-ref": "npm/prettier@^3.9.6"
+    },
+    {
+      "type": "library",
+      "name": "tsup",
+      "version": "^8.5.1",
+      "purl": "pkg:npm/tsup@^8.5.1",
+      "bom-ref": "npm/tsup@^8.5.1"
+    },
+    {
+      "type": "library",
+      "name": "typescript",
+      "version": "^6.0.3",
+      "purl": "pkg:npm/typescript@^6.0.3",
+      "bom-ref": "npm/typescript@^6.0.3"
+    },
+    {
+      "type": "library",
+      "name": "vite",
+      "version": "^8.3.0",
+      "purl": "pkg:npm/vite@^8.3.0",
+      "bom-ref": "npm/vite@^8.3.0"
+    },
+    {
+      "type": "library",
+      "name": "vitest",
+      "version": "^5.0.0",
+      "purl": "pkg:npm/vitest@^5.0.0",
+      "bom-ref": "npm/vitest@^5.0.0"
+    }
+  ]
+}
