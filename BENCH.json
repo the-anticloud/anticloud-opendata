@@ -540,10 +540,10 @@
  "version": "1.0.0",
  "source": {
   "git": {
-   "head": "3dfb3b7ca754cd03800470bf2f6ae96d4a5c1e15",
-   "url": "https://github.com/opendataloader-project/opendataloader-pdf",
-   "branch": "main",
-   "sha_verified_from": "GitHub API commits/main"
+   "url": "https://github.com/PKUJohnson/OpenData",
+   "head": "e9488201d0d14741cc247f780dcfa6141018a0d8",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/opendataloader-project/opendataloader-pdf"
   }
  }
 }

@@ -1,23 +1,26 @@
 # OPENDATA
 
-> **PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.**
+> 开源的数据提取工具，专注在各类网站上爬取数据，并通过简单易用的API方式使用 修正issue里面的几个问题，包括： 1. 选股宝主题名称问题 2. 经济数据pmi获取失败的问题 3. 全球指数获取失败的问题 4. 私募基金数据获取失败的问题
 
-**Category:** GOVERNMENT · **Ecosystem:** python · **Vendored upstream:** https://github.com/opendataloader-project/opendataloader-pdf · **Pinned commit:** `3dfb3b7ca754cd03800470bf2f6ae96d4a5c1e15` · **Vendor:** Anticloud FZ LLE
-
-> **Note:** this package vendors `https://github.com/opendataloader-project/opendataloader-pdf` as the implementation for the `OPENDATA` slot. The vendored repository name differs from the package name; the pin above is the exact commit vendored here.
+**Category:** GOVERNMENT · **Ecosystem:** python · **Vendored upstream:** https://github.com/PKUJohnson/OpenData · **Pinned commit:** `e9488201d0d14741cc247f780dcfa6141018a0d8` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Is
 
-**PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.**
+开源的数据提取工具，专注在各类网站上爬取数据，并通过简单易用的API方式使用 修正issue里面的几个问题，包括： 1. 选股宝主题名称问题 2. 经济数据pmi获取失败的问题 3. 全球指数获取失败的问题 4. 私募基金数据获取失败的问题
 
 This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
 ## Installation
 
-```
-pip install -e .
-# or: pip install -r requirements.txt
-```
+声明：本工具只支持 **python3**，请安装python3.6以上版本。没有支持python2的计划。
+
+1. 直接从pypi上安装：pip install opendatatools
+
+![](https://github.com/PKUJohnson/OpenData/blob/master/image/install_pip.jpg)
+
+2. 下载源代码，运行下面的命令：
+
+python setup.py install
 
 ## Usage
 
@@ -63,7 +66,7 @@ The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The 
 SHA3-256 of `BENCH.json`:
 
 ```
-1fd074d18e704091e6e326c45aee1049f18653bb69fa326b3d24fd4e2050ff2c
+36df18b092da2d48f27d7b7cb211993e1edaac07232bde7ef5199ff1a800ef75
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.
